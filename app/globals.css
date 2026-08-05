@@ -1,25 +1,10 @@
 @import "tailwindcss";
 
-html,
-body{
-  height: 100%;
-  margin: 0;
-}
 
-.layout{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.main-comtent{
-  flex: 1;
-}
 
 /* Navbar */
 .navbar {
-  background: #000099;
+  background: #006600;
   color: white;
   padding: 0.8rem 2rem;
 }
@@ -52,7 +37,7 @@ body{
 }
 
 .nav-links a:hover {
-  color: #ea0a90;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 20px;
 }
@@ -66,41 +51,6 @@ body{
   cursor: pointer;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #334155;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 220px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-
-.footer {
-  background-color: #1e293b;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .auth-page {
   min-height: calc(100vh - 140px);
@@ -124,7 +74,7 @@ body{
   font-weight: bold;
 }
 
-.auth-card input {
+.categor-card input {
   width: 100%;
   padding: 12px;
   margin-bottom: 14px;
@@ -151,4 +101,62 @@ body{
   max-width: 1200px;
   margin: auto;
   padding: 32px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #334155;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 220px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+.footer {
+  background-color: #006600;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.btn-logout{
+  
 }

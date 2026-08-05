@@ -59,6 +59,21 @@ export default function Navbar() {
           <li>
             <Link href="/about">เกี่ยวกับเรา</Link>
           </li>
+          
+          {user?.role === "admin" && (
+          <>
+          <li>
+            <Link href="/admin/users">Admin</Link>
+          </li>
+          <li>
+            <Link href="/admin/categories">เพิ่มหมวดหมู่</Link>
+          </li>
+          <li>
+            <Link href="/admin/products">สินค้า</Link>
+          </li>
+        </>
+      )}
+
 
           {user && (
             <li>
@@ -66,11 +81,7 @@ export default function Navbar() {
             </li>
           )}
 
-          {user?.role === "admin" && (
-            <li>
-              <Link href="/admin/users">Admin</Link>
-            </li>
-          )}
+         
 
           {!user ? (
             <>
