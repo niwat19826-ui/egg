@@ -1,5 +1,5 @@
 "use client";
-
+//handleSubmit
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -20,13 +20,17 @@ export default function RegisterPage() {
 
     const res = await fetch("/api/auth/register", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(form),
     });
 
     if (res.ok) {
       router.push("/login");
     } else {
-      alert("Register failed");
+      const data = await res.json();
+      alert(data.message || "Register failed");
     }
   }
 

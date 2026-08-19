@@ -59,6 +59,9 @@ export default function Navbar() {
           <li>
             <Link href="/about">เกี่ยวกับเรา</Link>
           </li>
+          <li>
+            <Link href="/blogs/page.tsx">บทความ</Link>
+          </li>
           
           {user?.role === "admin" && (
           <>
@@ -74,6 +77,7 @@ export default function Navbar() {
           <li>
             <Link href="/admin/products">สินค้า</Link>
           </li>
+          
         </>
       )}
 
